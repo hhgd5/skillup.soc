@@ -25,8 +25,8 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="min-h-fit py-10 md:min-h-[30rem] md:py-12   w-full font-montserrat font-extrabold" id="faq-section">
-      <div className="relative z-10 max-w-3xl mx-auto flex flex-col gap-12  justify-center items-center  ">
+    <div className="min-h-fit py-10 md:min-h-[70vh] md:py-12 md:flex  w-full font-montserrat font-extrabold bg-svg-pattern bg-no-repeat bg-cover bg-center" id="faq-section">
+      <div className="relative -z-0 max-w-3xl mx-auto flex flex-col gap-12  justify-center items-center min-h-full min-w-full  ">
         <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem

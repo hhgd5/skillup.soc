@@ -8,15 +8,12 @@ import UpcomingEvents from "@/components/sections/Upcoming";
 import Star from "@/components/stikers/Star";
 import Up from "@/components/stikers/Up";
 
-
 export default function Home() {
   return (
-    <div className="">
-      
-        <section id="MainSection">
-          <MainSection />
-        </section>
-      
+    <div>
+      <section id="MainSection">
+        <MainSection />
+      </section>
 
       <div className=" flex justify-center">
         {/* desing */}
@@ -58,7 +55,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" hidden md:block absolute top-72 sm:right-6  max-w-screen md:shrink-1 md:max-w-[75rem] lg:top-96 lg:left-12 lg:mx-auto  z-[-1] ">
+      <div className=" hidden md:block absolute top-72 sm:right-6  max-w-screen md:shrink-1 md:max-w-[75rem] lg:top-96 lg:left-12 lg:mx-auto  z-auto ">
         <div className="lg:mt-12">
           <Up />
         </div>
@@ -128,11 +125,9 @@ export default function Home() {
         <FAQSection />
       </section>
 
-      
-        <section>
-          <Join />
-        </section>
-      
+      <section>
+        <Join />
+      </section>
     </div>
   );
 }

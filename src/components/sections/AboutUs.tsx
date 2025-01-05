@@ -4,19 +4,19 @@ const AboutSection = () => {
   const goals = [
     {
       id: 1,
-      text: "Lorem ipsum dolor sit amet consectetur. At felis cras turpis",
+      text: "Develop New Skills - Provide opportunities to learn coding, design, English, and more.",
     },
     {
       id: 2,
-      text: "Lorem ipsum dolor sit amet consectetur. At felis cras turpis",
+      text: "Simplify Learning - Make education fun and accessible for everyone.",
     },
     {
       id: 3,
-      text: "Lorem ipsum dolor sit amet consectetur. At felis cras turpis",
+      text: "Foster Community - Build a supportive network for collaboration and growth.",
     },
     {
       id: 4,
-      text: "Lorem ipsum dolor sit amet consectetur. At felis cras turpis",
+      text: "Host Activities - Organize workshops, events, and competitions.",
     },
   ];
 
@@ -34,10 +34,9 @@ const AboutSection = () => {
           </div>
 
           <p className="text-[#FFFFEA] font-roboto md:text-[1.5rem] md:text-center md:max-w-[70rem] ">
-            Lorem ipsum dolor sit amet consectetur. At felis cras turpis
-            vivamerra fames eu aenean adipiscing. Dictum metus suspendisse
-            nullam viverra aliquam volutpat elementum. Vulputate proin egestas
-            lorem ferment
+            A community committed to growth, learning, and innovation. Empower
+            yourself with new skills and connect with like-minded individuals.
+            Together, let’s unlock your full potential!
           </p>
         </div>
 

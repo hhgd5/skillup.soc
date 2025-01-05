@@ -87,7 +87,6 @@ const DialogForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<FormInputs> = async (data) => {
     try {
-      // Destructure and ignore 'agreeTorules' and 'presence' since they are not needed in the database
       const {...sanitizedData } = {
         ...data,
         name: data.name.trim(),
@@ -95,7 +94,6 @@ const DialogForm: React.FC = () => {
         phone_number: data.phone_number.trim(),
       };
   
-      // Check if the email already exists in the database
       const { data: existingEmail } = await supabase
         .from("form_inputs")
         .select("email")
@@ -107,7 +105,6 @@ const DialogForm: React.FC = () => {
         return;
       }
   
-      // Insert the sanitized data into the database
       const { error } = await supabase
         .from("form_inputs")
         .insert([sanitizedData]);
@@ -169,11 +166,11 @@ const DialogForm: React.FC = () => {
   );
 
   return (
-    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen} >
       <DialogContent className="p-0 overflow-hidden max-h-[90vh] overflow-y-auto">
         <DialogTitle>
           <div className="bg-[#6C2BF7] py-4 sticky top-0 z-10 ">
-            <h1 className="md:text-[3rem] text-2xl text-center font-yearOfCamel font-black text-white">
+            <h1 className="md:text-[2.5rem] py-4 text-2xl text-center font-yearOfCamel font-black text-white">
               SkillUP Society
             </h1>
           </div>

@@ -16,13 +16,13 @@ interface CalendarDemoProps {
   upcomingEvents?: Event[];  
 }
 
-const CalendarDemo = ({ upcomingEvents = [] }: CalendarDemoProps) => {  // Added default value
+const CalendarDemo = ({ upcomingEvents = [] }: CalendarDemoProps) => {  
   const [date, setDate] = useState<Date | undefined>(new Date());
  
   
   const parsedEvents = (upcomingEvents || []).map(event => ({
     ...event,
-    dateObj: new Date(`${event.date} 2024`)
+    dateObj: new Date(`${event.date} 2025`)
   }));
 
   const selectedDateEvents = parsedEvents.filter(event =>

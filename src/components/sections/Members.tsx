@@ -72,7 +72,7 @@ const Members = () => {
                       className=" w-40  md:w-52 md:h-full "
                     />
                     <div className="absolute bottom-2 bg-[#FAF9F6] font-montserrat text-start bg-opacity-80 px-8 py-1 rounded-lg shadow-lg mx-auto">
-                      <h2 className="font-bold text-[#000000] text-[1rem] ">
+                      <h2 className="font-bold text-[#000000] text-[0.9rem] ">
                         {member.name}
                       </h2>
                       <h3 className="text-sm text-gray-600">{member.role}</h3>

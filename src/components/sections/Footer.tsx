@@ -67,9 +67,10 @@ const Footer = () => {
               </svg>
             </div>
             <p className=" text-sm max-w-xs font-roboto font-semibold text-[0.85rem] text-[#747474] text-start   ">
-              Lorem ipsum dolor sit amet consectetur. At felis cras turpis
-              vivamuerra fames eu aenean adipiscing. Dictum metus suspendisse
-              nullam viverra aliquam volutpat elementum. Vulputate proin egestas
+              SkillUP Society is a student club dedicated to learning, growth,
+              and collaboration. Our mission is to empower members through
+              skills and innovation, fostering a supportive environment for
+              personal and professional development.
             </p>
           </div>
 
@@ -182,19 +183,25 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 font-roboto font-semibold text-[0.85rem] text-[#747474]">
               <Link
-                href="#"
+                href="https://instagram.com/skillup.soc"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#747474] hover:text-white transition-colors"
               >
                 <Instagram size={25} />
               </Link>
               <Link
-                href="#"
+                href="https://linkedin.com/company/skillup-society"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#747474] hover:text-white transition-colors"
               >
                 <Linkedin size={25} />
               </Link>
               <Link
                 href="#"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#747474] hover:text-white transition-colors"
               >
                 <Facebook size={25} />

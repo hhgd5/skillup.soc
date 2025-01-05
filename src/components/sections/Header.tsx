@@ -10,6 +10,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import SharedButton from "../SharedButton";
+import Link from "next/link";
+import { link } from "fs";
 
 type NavItem = {
   label: string;
@@ -22,7 +24,7 @@ const Header = () => {
     { label: "About Us", href: "AboutUs" },
     { label: "Team", href: "Members" },
     { label: "Events", href: "UpcomingEvents" },
-    { label: "Workshop", href: "/workshop" },
+    { label: "Workshop", href: "/Workshop" },
   ];
 
   const handleScroll = (id: string) => {
@@ -39,13 +41,9 @@ const Header = () => {
 
 
 
-
-
-
-
   return (
     <div className=" flex justify-between items-center mx-auto container  lg:pt-6 px-6 max-w-[75rem]  ">
-      <div className="flex items-center">
+      <div className="flex items-center" >
         <svg
           width="90"
           height="70"
@@ -120,11 +118,17 @@ const Header = () => {
                       className=" hover:text-purple-600 border-b-2 pb-2 "
                       onClick={() => handleScroll(item.href)}
                     >
-                      {item.label}
+                      {item.label === "Workshop" ? (
+                        <Link href="/Workshop">
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <div>{item.label}</div>
+                      )}
                     </li>
                   ))}
                 </ul>
-                <SharedButton variant="custm1"/>
+                <SharedButton variant="custm1" />
               </div>
             </SheetContent>
           </Sheet>
@@ -141,14 +145,19 @@ const Header = () => {
                   className="text-black border-2 border-gray-300 rounded-2xl w-24 h-9  hover:border-gray-600 transition-colors"
                   onClick={() => handleScroll(item.href)}
                 >
-                  {item.label}
+                  {item.label === "Workshop" ? (
+                    <Link href="/Workshop" >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <div>{item.label}</div>
+                  )}
                 </button>
               </li>
             ))}
           </ul>
-          <div className=" hidden lg:block" >
-
-          <SharedButton variant="custm1"/>
+          <div className=" hidden lg:block">
+            <SharedButton variant="custm1" />
           </div>
         </nav>
       </div>

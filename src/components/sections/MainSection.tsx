@@ -56,10 +56,10 @@ const MainSection = () => {
 
         <div className="mt-6 px-6">
           <p className="text-black/75 text-[1rem] max-w-52 text-start items-start font-roboto font-medium md:text-center md:text-[1.3rem] md:max-w-5xl md:mx-auto">
-            Lorem ipsum dolor sit amet consectetur. At felis cras turpis
-            vivamerra fames eu aenean adipiscing. Dictum metus suspendisse
-            nullam viverra aliquet amet elementum. Vulputate proin egestas lorem
-            fermentum lacus et. Etiam mauris phasellus artix duis.
+            SkillUP Society is a student club dedicated to learning, growth, and
+            collaboration. Our mission is to empower members through skills and
+            innovation, fostering a supportive environment for personal and
+            professional development.
           </p>
         </div>
       </div>

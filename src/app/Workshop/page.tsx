@@ -11,6 +11,7 @@ import { supabase } from "@/lib/supabase";
 
 async function fetchWorkshops() {
   const { data: workshops, error } = await supabase.from("workshops").select("*");
+  
   if (error) {
     console.error("Error fetching workshops:", error.message);
     return [];

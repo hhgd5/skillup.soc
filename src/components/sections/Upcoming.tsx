@@ -12,17 +12,10 @@ interface Event {
 const events: Event[] = [
   {
     id: 1,
-    date: "30 December",
-    title: "Opening Class",
-    location: "Oba Ahmed Fut",
-    time: "10:00 AM - 12 PM",
-  },
-  {
-    id: 2,
-    date: "1 December",
-    title: "Networking Session",
-    location: "Main Auditorium",
-    time: "2:00 PM - 4 PM",
+    date: "6 January",
+    title: "Opening Ceremony and chess compitition",
+    location: " Library of Faculty of Exact Sciences and Natural and Life Sciences",
+    time: "9:00 AM - 12 PM",
   },
 ];
 
