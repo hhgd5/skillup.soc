@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/sheet";
 import SharedButton from "../SharedButton";
 import Link from "next/link";
-import { link } from "fs";
 
 type NavItem = {
   label: string;
