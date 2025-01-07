@@ -33,10 +33,13 @@ const DialogForm: React.FC = () => {
   });
 
   const faculties = [
-    "Faculty of Science",
-    "Faculty of Engineering",
-    "Faculty of Literature",
-    "Faculty of Law",
+    "Faculty Of Letters And Languages",
+    "Faculty Of Sciences And Technology",
+    "Faculty Of Exact Sciences And Natural And Life Sciences",
+    "Faculty Of Law And Political Sciences",
+    "Faculty Of Human And Social Sciences",
+    "Faculty Of Economic Sciences And Business Sciences And Management Sciences",
+    "Institute Of Sciences And Technics For Sport And Physical",
   ];
 
   const currentSkills = [
@@ -44,12 +47,33 @@ const DialogForm: React.FC = () => {
     "Graphic Design",
     "Marketing",
     "Project Management",
+    "Communication",
+    "Writing",
+    "Problem-Solving",
+    "prompt engineering",
+    "Drawing",
+    "Photography",
+    "Digital Art",
+    "Storyboarding",
+    "Presentation Design",
+    "Other",
   ];
 
   const improveSkills = [
-    "Learn Data Science",
-    "Improve Public Speaking",
-    "Enhance Leadership Skills",
+    "Improve Web Development",
+    "Enhance Graphic Design",
+    "Improve Marketing",
+    "Enhance Project Management",
+    "Improve Communication",
+    "Enhance Writing",
+    "Improve Problem-Solving",
+    "Enhance Prompt Engineering",
+    "Improve Drawing",
+    "Enhance Photography",
+    "Improve Digital Art",
+    "Enhance Storyboarding",
+    "Improve Presentation Design",
+    "Other",
   ];
 
   const joiningReasons = [
@@ -57,6 +81,7 @@ const DialogForm: React.FC = () => {
     "Learning new skills",
     "Collaborating on projects",
     "Career growth",
+    "Other",
   ];
 
   const nameValidation = {
@@ -87,49 +112,50 @@ const DialogForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<FormInputs> = async (data) => {
     try {
-      const {...sanitizedData } = {
+      const { ...sanitizedData } = {
         ...data,
         name: data.name.trim(),
         email: data.email.toLowerCase().trim(),
         phone_number: data.phone_number.trim(),
       };
-  
+
       const { data: existingEmail } = await supabase
         .from("form_inputs")
         .select("email")
         .eq("email", sanitizedData.email)
         .single();
-  
+
       if (existingEmail) {
-        alert("This email is already registered. Please use a different email.");
+        alert(
+          "This email is already registered. Please use a different email."
+        );
         return;
       }
-  
+
       const { error } = await supabase
         .from("form_inputs")
         .insert([sanitizedData]);
-  
+
       if (error) {
         throw new Error(error.message || "Failed to insert data");
       }
-  
+
       alert("Form submitted successfully!");
-  
+
       setIsDialogOpen(false);
       reset();
     } catch (error) {
       if (error instanceof Error) {
         console.error("Submission error:", error);
-        alert(error.message || "An unexpected error occurred. Please try again.");
+        alert(
+          error.message || "An unexpected error occurred. Please try again."
+        );
       } else {
         console.error("Unexpected error:", error);
         alert("An unexpected error occurred. Please try again.");
       }
     }
   };
-  
-  
-  
 
   const Cancel = () => {
     if (
@@ -166,7 +192,7 @@ const DialogForm: React.FC = () => {
   );
 
   return (
-    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen} >
+    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
       <DialogContent className="p-0 overflow-hidden max-h-[90vh] overflow-y-auto">
         <DialogTitle>
           <div className="bg-[#6C2BF7] py-4 sticky top-0 z-10 ">
